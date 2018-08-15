@@ -18,5 +18,6 @@ Job Search
    :maxdepth: 2
 
    resume/technical-resume
-   online-profiles/github-profile.rst
-   online-profiles/linkedin-profile.rst
+   online-profiles/github-profile
+   online-profiles/linkedin-profile
+   interviews/behavioral-interviews
