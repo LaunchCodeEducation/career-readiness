@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>&lt;no title&gt; &#8212; LaunchCode Career Readiness  documentation</title>
+    <title>Mars Exploration Solution &#8212; LaunchCode Career Readiness  documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/launchcode.css" type="text/css" />
@@ -18,6 +18,7 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Grading Students Solution" href="grading-students.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -59,7 +60,7 @@
 </ul>
 </li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../resume/technical-resume.html">Technical Resumes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../resume/technical-resume.html#technical-resume-format">Technical Resume Format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../resume/technical-resume.html#resume-length">Resume Length</a></li>
@@ -83,10 +84,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../behavioral-interviews.html#practicing-responding-to-behavioral-questions">Practicing Responding to Behavioral Questions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../live-coding.html">Live Coding</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../live-coding.html">Live Coding</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#live-coding-demo">Live Coding Demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#live-coding-playbook">Live Coding Playbook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#live-coding-practice">Live Coding Practice</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../live-coding.html#practice-problem-solutions">Practice Problem Solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#further-practice">Further Practice</a></li>
 </ul>
 </li>
@@ -118,14 +120,45 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="simple">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Mars Exploration Solution</a><ul>
+<li><a class="reference internal" href="#python3-solution">Python3 Solution</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
       </div>
     <div class="col-md-9 content">
       
-  
+  <div class="section" id="mars-exploration-solution">
+<h1>Mars Exploration Solution<a class="headerlink" href="#mars-exploration-solution" title="Permalink to this headline">¶</a></h1>
+<p>For the remaining two problems we will share with you a solution we
+created that solves the problem, but you will be responsible for
+following the steps.</p>
+<p>If you want more practice on following all the steps, talk it over with
+your fellow classmates, or your mentor!</p>
+<div class="section" id="python3-solution">
+<h2>Python3 Solution<a class="headerlink" href="#python3-solution" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-none notranslate"><div class="highlight"><pre><span></span>string_mistakes = 0
+where_are_we = 1
+for i in range(len(s)):
+    if where_are_we == 1 or where_are_we == 3:
+        if s[i] != &quot;S&quot;:
+            string_mistakes += 1
+    elif where_are_we == 2:
+        if s[i] != &quot;O&quot;:
+            string_mistakes += 1
+    if where_are_we == 3:
+        where_are_we = 1
+    else:
+        where_are_we += 1
+print(string_mistakes)
+</pre></div>
+</div>
+</div>
+</div>
+
 
     </div>
       
@@ -136,10 +169,15 @@
     <p class="pull-right">
       <a href="#">Back to top</a>
       
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../../_sources/interviews/live-coding-practice/mars-exploration.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
     </p>
     <p>
-        &copy; Copyright 2018, LaunchCode.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.<br/>
     </p>
   </div>
 </footer>

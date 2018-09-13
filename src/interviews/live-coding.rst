@@ -90,10 +90,29 @@ To make the most of this practice, you need to practice in the same format you w
 Practice Problems
 ^^^^^^^^^^^^^^^^^
 
+.. note:: 
+
+   If you have not signed up for a HackerRank profile yet, you will need to do so in order to do these problems. After creating an account and logging into HackerRank, please come back here and follow the links to the prep work problems.
+
 1. `Staircase <https://www.hackerrank.com/challenges/staircase/problem>`_
 2. `camelCase <https://www.hackerrank.com/challenges/camelcase/problem>`_
 3. `Grading Students <https://www.hackerrank.com/challenges/grading/problem>`_
 4. `Mars Exploration <https://www.hackerrank.com/challenges/mars-exploration/problem>`_
+
+Practice Problem Solutions
+--------------------------
+
+We provided solutions for all four of the problems to use to verify your work, or if you get super stuck. The first two solutions have a break down of the steps you should follow. If you are struggling with this prep work, start with the solution to the Staircase problem.
+
+.. note:: Solutions are provided in Python, since it is the most common language across LaunchCode courses. It is also relatively easy to read, even if you don't know much Python. If you have language-specific questions about your solution, ask a instructor/TA/mentor.
+
+.. toctree::
+   :maxdepth: 1
+
+   live-coding-practice/staircase
+   live-coding-practice/camel-case
+   live-coding-practice/grading-students
+   live-coding-practice/mars-exploration
 
 Further Practice
 ----------------

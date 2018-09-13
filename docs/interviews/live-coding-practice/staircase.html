@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>&lt;no title&gt; &#8212; LaunchCode Career Readiness  documentation</title>
+    <title>Staircase Solution &#8212; LaunchCode Career Readiness  documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/launchcode.css" type="text/css" />
@@ -18,6 +18,8 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="camelCase Solution" href="camel-case.html" />
+    <link rel="prev" title="Live Coding" href="../live-coding.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -59,7 +61,7 @@
 </ul>
 </li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../resume/technical-resume.html">Technical Resumes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../resume/technical-resume.html#technical-resume-format">Technical Resume Format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../resume/technical-resume.html#resume-length">Resume Length</a></li>
@@ -83,10 +85,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../behavioral-interviews.html#practicing-responding-to-behavioral-questions">Practicing Responding to Behavioral Questions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../live-coding.html">Live Coding</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../live-coding.html">Live Coding</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#live-coding-demo">Live Coding Demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#live-coding-playbook">Live Coding Playbook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#live-coding-practice">Live Coding Practice</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../live-coding.html#practice-problem-solutions">Practice Problem Solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../live-coding.html#further-practice">Further Practice</a></li>
 </ul>
 </li>
@@ -118,14 +121,423 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="simple">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Staircase Solution</a><ul>
+<li><a class="reference internal" href="#gather-requirements-clarify-problem">Gather Requirements/Clarify Problem</a></li>
+<li><a class="reference internal" href="#break-down-complex-pieces-into-smaller-pieces">Break Down Complex Pieces into Smaller Pieces</a></li>
+<li><a class="reference internal" href="#pseudocode">Pseudocode</a></li>
+<li><a class="reference internal" href="#code">Code</a></li>
+<li><a class="reference internal" href="#testing">Testing</a><ul>
+<li><a class="reference internal" href="#iteration-1">Iteration 1:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-0-print-str">Variables (n = 4; i = 0; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output">Output:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#iteration-2">Iteration 2:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-1-print-str">Variables (n = 4; i = 1; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output-1">Output:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#iteration-3">Iteration 3:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-2-print-str">Variables (n = 4; i = 2; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output-2">Output:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#iteration-4">Iteration 4:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-3-print-str">Variables (n = 4; i = 3; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output-3">Output:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#changes">Changes</a></li>
+<li><a class="reference internal" href="#testing-take-two">Testing take two…</a><ul>
+<li><a class="reference internal" href="#iteration-1-1">Iteration 1:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-1-print-str-1">Variables (n = 4; i = 1; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output-4">Output:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#iteration-2-1">Iteration 2:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-2-print-str-1">Variables (n = 4; i = 2; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output-5">Output:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#iteration-3-1">Iteration 3:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-3-print-str-1">Variables (n = 4; i = 3; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output-6">Output:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#iteration-4-1">Iteration 4:</a><ul>
+<li><a class="reference internal" href="#variables-n-4-i-4-print-str">Variables (n = 4; i = 4; print_str = “”)</a></li>
+<li><a class="reference internal" href="#output-7">Output:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
       </div>
     <div class="col-md-9 content">
       
-  
+  <div class="section" id="staircase-solution">
+<h1>Staircase Solution<a class="headerlink" href="#staircase-solution" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gather-requirements-clarify-problem">
+<h2>Gather Requirements/Clarify Problem<a class="headerlink" href="#gather-requirements-clarify-problem" title="Permalink to this headline">¶</a></h2>
+<p>We are given an integer as input(n).</p>
+<p>n represents the height, and width of our desired output.</p>
+<p>Our desired output is a staircase drawn with the pound symbol (#). If a
+pound symbol is not represented it will be replaced by a space (” “).</p>
+<p>So this means there will be n number of elements in each print
+statement, and there will be some combination of spaces and pounds.</p>
+<p>Test case:</p>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>input: n = 4
+output:    #
+          ##
+         ###
+        ####
+</pre></div>
+</div>
+</div>
+<div class="section" id="break-down-complex-pieces-into-smaller-pieces">
+<h2>Break Down Complex Pieces into Smaller Pieces<a class="headerlink" href="#break-down-complex-pieces-into-smaller-pieces" title="Permalink to this headline">¶</a></h2>
+<p>I know we will have to print n number of new lines. I can do this with a
+for loop.</p>
+<p>Within that for loop I can create a blank string, and concatenate either
+spaces or pound symbols, depending on where we are in the original loop.</p>
+<p>I can then print the new string before the original loop iterates.</p>
+</div>
+<div class="section" id="pseudocode">
+<h2>Pseudocode<a class="headerlink" href="#pseudocode" title="Permalink to this headline">¶</a></h2>
+<p>I will need a for loop, and within that loop I will need to nest 2
+additional for loops. My plan is to create a blank string that will have
+spaces added to it first, then pound signs added second. The loops for
+spaces and pounds will depend on where we are in the original loop.</p>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for loop -&gt; goes from 0 to n
+    variable print_string = &#39;&#39;
+    for loop -&gt; adds the number of spaces to print_string
+    for loop -&gt; adds the appropriate number of pounds to print_string
+    print(print_string)
+</pre></div>
+</div>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>Following the pseudocode above, this is what I have:</p>
+<div class="code python highlight-none notranslate"><div class="highlight"><pre><span></span>for i in range(0,n):
+    print_str = &quot;&quot;
+    for j in range((n - i)):
+        print_str += &quot; &quot;
+    for k in range(i):
+        print_str += &quot;#&quot;
+
+    print(print_str)
+</pre></div>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>Let’s test it out.</p>
+<div class="section" id="iteration-1">
+<h3>Iteration 1:<a class="headerlink" href="#iteration-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-0-print-str">
+<h4>Variables (n = 4; i = 0; print_str = “”)<a class="headerlink" href="#variables-n-4-i-0-print-str" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range((4 - 0)):
+    Iteration 1:
+    print_str = &quot; &quot;
+
+    Iteration 2:
+    print_str = &quot;  &quot;
+
+    Iteration 3:
+    print_str = &quot;   &quot;
+
+    Iteration 4:
+    print_str = &quot;    &quot;
+
+for k in range(0):
+    # nothing happens
+
+print(print_str)
+</pre></div>
+</div>
+</div>
+<div class="section" id="output">
+<h4>Output:<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;    &quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iteration-2">
+<h3>Iteration 2:<a class="headerlink" href="#iteration-2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-1-print-str">
+<h4>Variables (n = 4; i = 1; print_str = “”)<a class="headerlink" href="#variables-n-4-i-1-print-str" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range ((4 - 1))
+    Iteration 1:
+    print_str = &quot; &quot;
+
+    Iteration 2:
+    print_str = &quot;  &quot;
+
+    Iteration 3:
+    print_str = &quot;   &quot;
+
+for k in range(1):
+    Iteration 1:
+    print_str = &quot;   #&quot;
+
+print(print_str)
+
+Output for 2nd Iteration:
+&quot;   #&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-1">
+<span id="id1"></span><h4>Output:<a class="headerlink" href="#output-1" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;    &quot;
+&quot;   #&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iteration-3">
+<h3>Iteration 3:<a class="headerlink" href="#iteration-3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-2-print-str">
+<h4>Variables (n = 4; i = 2; print_str = “”)<a class="headerlink" href="#variables-n-4-i-2-print-str" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range ((4 - 2))
+    Iteration 1:
+    print_str = &quot; &quot;
+
+    Iteration 2:
+    print_str = &quot;  &quot;
+
+for k in range(2):
+    Iteration 1:
+    print_str = &quot;  #&quot;
+
+    Iteration 2:
+    print_str = &quot;  ##&quot;
+
+print(print_str)
+
+Output for 2nd Iteration:
+&quot;  ##&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-2">
+<span id="id2"></span><h4>Output:<a class="headerlink" href="#output-2" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;    &quot;
+&quot;   #&quot;
+&quot;  ##&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iteration-4">
+<h3>Iteration 4:<a class="headerlink" href="#iteration-4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-3-print-str">
+<h4>Variables (n = 4; i = 3; print_str = “”)<a class="headerlink" href="#variables-n-4-i-3-print-str" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range ((4 - 3))
+    Iteration 1:
+    print_str = &quot; &quot;
+
+for k in range(3):
+    Iteration 1:
+    print_str = &quot; #&quot;
+
+    Iteration 2:
+    print_str = &quot; ##&quot;
+
+    Iteration 3:
+    print_str = &quot; ###&quot;
+
+print(print_str)
+
+Output for 3rd Iteration:
+&quot; ###&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-3">
+<span id="id3"></span><h4>Output:<a class="headerlink" href="#output-3" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;    &quot;
+&quot;   #&quot;
+&quot;  ##&quot;
+&quot; ###&quot;
+</pre></div>
+</div>
+<p>At this point, the original for loop has completed, and this would be
+final output.</p>
+<p>Our output doesn’t quite match up with our expected output, it looks
+like we are off by one! A common error, let’s make small changes and see
+how these change our output.</p>
+</div>
+</div>
+</div>
+<div class="section" id="changes">
+<h2>Changes<a class="headerlink" href="#changes" title="Permalink to this headline">¶</a></h2>
+<p>A blank line is printed first along with the incorrect number of spaces
+and pounds because the first for loop is going from 0-3. We need it to
+go from 1-4 and it should be fine. So let’s change the first for loop.</p>
+<div class="code python highlight-none notranslate"><div class="highlight"><pre><span></span>for i in range(1,n+1):
+    print_str = &quot;&quot;
+    for j in range((n - i)):
+        print_str += &quot; &quot;
+    for k in range(i):
+        print_str += &quot;#&quot;
+
+    print(print_str)
+</pre></div>
+</div>
+</div>
+<div class="section" id="testing-take-two">
+<h2>Testing take two…<a class="headerlink" href="#testing-take-two" title="Permalink to this headline">¶</a></h2>
+<p>Let’s try this again!</p>
+<div class="section" id="iteration-1-1">
+<span id="id4"></span><h3>Iteration 1:<a class="headerlink" href="#iteration-1-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-1-print-str-1">
+<span id="id5"></span><h4>Variables (n = 4; i = 1; print_str = “”)<a class="headerlink" href="#variables-n-4-i-1-print-str-1" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range((4 - 1)):
+    Iteration 1:
+    print_str = &quot; &quot;
+
+    Iteration 2:
+    print_str = &quot;  &quot;
+
+    Iteration 3:
+    print_str = &quot;   &quot;
+
+for k in range(1):
+    Iteration 1:
+    print_str = &quot;   #&quot;
+
+print(print_str)
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-4">
+<span id="id6"></span><h4>Output:<a class="headerlink" href="#output-4" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;   #&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iteration-2-1">
+<span id="id7"></span><h3>Iteration 2:<a class="headerlink" href="#iteration-2-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-2-print-str-1">
+<span id="id8"></span><h4>Variables (n = 4; i = 2; print_str = “”)<a class="headerlink" href="#variables-n-4-i-2-print-str-1" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range ((4 - 2))
+    Iteration 1:
+    print_str = &quot; &quot;
+
+    Iteration 2:
+    print_str = &quot;  &quot;
+
+
+for k in range(1):
+    Iteration 1:
+    print_str = &quot;  #&quot;
+
+    Iteration 2:
+    print_str = &quot;  ##&quot;
+
+print(print_str)
+
+Output for 2nd Iteration:
+&quot;  ##&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-5">
+<span id="id9"></span><h4>Output:<a class="headerlink" href="#output-5" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;   #&quot;
+&quot;  ##&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iteration-3-1">
+<span id="id10"></span><h3>Iteration 3:<a class="headerlink" href="#iteration-3-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-3-print-str-1">
+<span id="id11"></span><h4>Variables (n = 4; i = 3; print_str = “”)<a class="headerlink" href="#variables-n-4-i-3-print-str-1" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range ((4 - 3))
+    Iteration 1:
+    print_str = &quot; &quot;
+
+for k in range(2):
+    Iteration 1:
+    print_str = &quot; #&quot;
+
+    Iteration 2:
+    print_str = &quot; ##&quot;
+
+    Iteration 3:
+    print_str = &quot; ###&quot;
+
+print(print_str)
+
+Output for 2nd Iteration:
+&quot; ###&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-6">
+<span id="id12"></span><h4>Output:<a class="headerlink" href="#output-6" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;   #&quot;
+&quot;  ##&quot;
+&quot; ###&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iteration-4-1">
+<span id="id13"></span><h3>Iteration 4:<a class="headerlink" href="#iteration-4-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="variables-n-4-i-4-print-str">
+<h4>Variables (n = 4; i = 4; print_str = “”)<a class="headerlink" href="#variables-n-4-i-4-print-str" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>for j in range ((4 - 4))
+    # the conditions are never met so nothing happens!
+
+for k in range(3):
+    Iteration 1:
+    print_str = &quot;#&quot;
+
+    Iteration 2:
+    print_str = &quot;##&quot;
+
+    Iteration 3:
+    print_str = &quot;###&quot;
+
+    Iteration 4:
+    print_str = &quot;####&quot;
+
+print(print_str)
+
+Output for 3rd Iteration:
+&quot;####&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-7">
+<span id="id14"></span><h4>Output:<a class="headerlink" href="#output-7" title="Permalink to this headline">¶</a></h4>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;   #&quot;
+&quot;  ##&quot;
+&quot; ###&quot;
+&quot;####&quot;
+</pre></div>
+</div>
+<p>Alright! We did it. Our actual output matches the desired output.</p>
+<p>We successfully followed all of the steps and created a solution that
+solves the problem!</p>
+</div>
+</div>
+</div>
+</div>
+
 
     </div>
       
@@ -136,10 +548,15 @@
     <p class="pull-right">
       <a href="#">Back to top</a>
       
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../../_sources/interviews/live-coding-practice/staircase.rst.txt"
+     rel="nofollow">Page Source</a>
+</div>
+      
     </p>
     <p>
-        &copy; Copyright 2018, LaunchCode.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.<br/>
     </p>
   </div>
 </footer>
